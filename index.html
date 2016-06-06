@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+
+
+<!--<script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js">
+	
+</script>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script> -->
+
+<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+var imagesArray = ["images/-1.jpg","images/-2.jpg","images/-3.jpg","images/-4.jpg","images/-5.jpg","images/-6.jpg"];
+function displayImage(){
+
+    //the first statement should generate a random number in the range 0 to 6 (the subscript values of the image file names in the imagesArray)
+
+    var num = Math.floor(Math.random() *6); // 0...5
+    //the second statement display the random image from the imagesArray array in the canvas image using the random number as the subscript value
+    document.canvas.src = imagesArray[num];
+ 	$("#pop").flip();
+
+}
+</script>
+</head>
+<body heigth="auto" width="auto" background-color="#green">
+
+<!--<div data-role="header" align="center"><p>Dice Game</p></div> -->
+ <div align="center"  data-transition="fade">  <img onclick="displayImage();" src="images/-blank.jpg" name="canvas"align="center"  height="auto" /> </div>
+<input style="background-color:#Green;" type="submit" onclick="displayImage();" type=button value="Tap here to Play">
+<!--<div data-role="footer" align="center"><p>Created by:Tajveez 13-ARID-1330</p></div>
+<img src="images/1.png" ></div>
+</div>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+ -->
+
+</body>
+</html>
